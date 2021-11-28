@@ -1,0 +1,58 @@
+<div class="row">
+    <div class="col-md-6">
+        <h3>Add Student</h3>
+        <div class="form-group row">
+            <div class="col-md-6">
+                <label for="stu_name">Student Name</label>
+                <input type="text" id="stu_name" class="form-control" placeholder="Enter name" [(ngModel)]="stuName">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-md-6">
+                <label for="stu_city">City</label>
+                <input type="text" id="stu_city" class="form-control" placeholder="Enter city" [(ngModel)]="stuCity">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <button type="button" class="btn btn-primary" (click)="submitData()" [disabled]="!addStudentEnable">Add
+                    Student</button>
+            </div>
+        </div>
+        <br>
+        <div class="row" [hidden]="successFlag">
+            <div class="col-md-6">
+                <div class="alert alert-success">
+                    {{successMessage}}
+                </div>
+            </div>
+        </div>
+        <div class="row" [hidden]="failureFlag">
+            <div class="col-md-6">
+                <div class="alert alert-warning">
+                    {{failureMessage}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <h3> Student Data</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>City</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let stu of studentList">
+                    <td>{{stu.stuName}}</td>
+                    <td>{{stu.stuCity}}</td>
+                    <td><button class="btn btn-danger">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

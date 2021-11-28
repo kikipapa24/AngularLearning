@@ -1,0 +1,60 @@
+1.To install angular/cli from node package manager
+	npm install -g @angular/cli
+	
+2.TO check Angualr install or not
+  ng version 
+  
+3. To create new angular project
+   ng new project_name --no-strict
+
+4. To start the server 
+	ng serve
+
+5. To cretae a component
+	ng generate component somename
+	ng g c somename
+	ng g c somename --skipTests   [it will skip the test file creation ]
+	
+
+
+
+
+package.json
+module
+Component
+	Select by element
+	Select by attribute
+	
+Directive
+	create by manaula
+	ng g c
+	
+String interpolation
+PropertyBinding
+	interpolation{{}} vs [innertext]
+
+DataBinding-- communication between typic [(ngModel)]
+Event binding--Binding between events  ()
+Types of events in angular
+
+
+What is Directives
+	Directives are custom HTML attributes which used to 
+	change the style or behavior of the Dom elements.
+	
+Types of Directive
+	Components Directive --(directives with a template)
+	Structure Directive --(It will change the DOM layout by adding and removing DOM elements)
+						   used * as prefix in this drective
+	Attribute Directive --(To change the style/Behaviour of an element, component, or another directive)
+	
+Types of Structural directive
+	NgIf -- Done	
+	NgFor -- Done 
+	NgSwitch  -- Yet to start
+	
+In build Attribute directive
+	NgStyle, NgClass
+	
+
+
